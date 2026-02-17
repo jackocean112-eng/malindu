@@ -1,0 +1,100 @@
+/* Animations */
+
+/* Antigravity Float */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.antigravity-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Soft Glow Pulse */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(38, 221, 249, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(38, 221, 249, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(38, 221, 249, 0.1);
+    }
+}
+
+.glow-button {
+    animation: pulseGlow 3s infinite;
+}
+
+/* Entry Animations */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility Classes for JS triggering */
+.slide-up {
+    opacity: 0;
+    /* Hidden by default */
+    animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+/* Scroll Reveal Class (Added by JS) */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade In Down for Nav */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.fade-in-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
