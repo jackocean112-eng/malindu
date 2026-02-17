@@ -171,7 +171,7 @@ section {
     transform: translateY(-3px);
 }
 
-/* Background Gradients */
+/* Background Gradients & Shapes */
 .background-glow {
     position: fixed;
     width: 600px;
@@ -193,6 +193,53 @@ section {
     bottom: -200px;
     right: -200px;
     background: radial-gradient(circle, #7d26f9, transparent);
+}
+
+/* Floating Colorful Shapes */
+.shape-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    opacity: 0.4;
+    animation: floatShape 20s infinite alternate;
+}
+
+.shape-1 {
+    top: 20%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(180deg, #ff00cc, #333399);
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    bottom: 20%;
+    right: 10%;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    animation-delay: -5s;
+}
+
+.shape-3 {
+    top: 40%;
+    left: 60%;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to bottom right, #f8b500, #fceabb);
+    animation-delay: -10s;
+}
+
+@keyframes floatShape {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(30px, 50px) rotate(20deg);
+    }
 }
 
 .grid-overlay {
